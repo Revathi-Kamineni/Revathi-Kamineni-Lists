@@ -14,8 +14,8 @@ import java.util.List;
  */
 public class ListExercise {
     
-    private static List<Integer> list;
-    List<Integer> sample = new ArrayList<>();
+   private static List<Integer> list;
+   
     /**
      * Instantiate and return a List of Integers.
      *
@@ -33,7 +33,9 @@ public class ListExercise {
      * @return a List<Integer> object.
      */
     public List<Integer> createList(){
-        return sample;
+      //  List<Integer> list = new ArrayList<>();
+      list=new ArrayList<>();
+        return list;
     }
 
     /**
@@ -56,6 +58,8 @@ public class ListExercise {
      */
     public void addToList(List<Integer> list, int value){
         list.add(value);
+        //list.add(2);
+       
     }
 
     /**
@@ -71,7 +75,7 @@ public class ListExercise {
      * @return the int at the location in 'list' represented by 'index'.
      */
     public int get(List<Integer> list, int index){
-        return list.get(index);
+        return list.get(index); 
     }
 
     /**
@@ -84,7 +88,7 @@ public class ListExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeFromList(List<Integer> list, int position){
-        list.remove(position);
+        list.remove(position);  
     }
 
     /**
@@ -97,19 +101,7 @@ public class ListExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void updateAtPosition(List<Integer> list, int position, int value){
-        list.set(position,value);
+        list.set(position,value);  
     }
-    public static void main(String[] args){
-        ListExercise l = new ListExercise();
-       
-        System.out.println(l.createList());
-        System.out.println(l.getSize(list));
-        l.addToList(list, 1);
-        l.addToList(list, 2);
-        l.addToList(list, 3);
-        System.out.println(l.get(list, 0));
-        l.removeFromList(list, 0);
-        l.updateAtPosition(list, 0,3);
-    
-}
+   
 }
